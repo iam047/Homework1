@@ -141,7 +141,6 @@ p {
     font-size: 12px;
     line-height: 1.8;
     color: gray;
-    padding-right: 300px;
 }
 
 .consulting-rev a {
@@ -357,3 +356,56 @@ a {
 
 }
 
+@media screen and (min-width: 577px) and (max-width: 900px) {
+    .p {
+        font-style: normal;
+        font-size: 10px;
+        line-height: 1.8;
+        color: gray;
+        width: 300px;
+    }
+
+    .distance-colon {
+        padding: 0px 20px 0px 50px;
+    }
+
+    .colon {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+
+    footer {
+        height: 500px;
+        background: #d77474;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        color: #ffffff;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .distance {
+        padding-top: 1%;
+        padding-left: 5%;
+        padding-right: 2%;
+    }
+
+    .nav-primary{
+       flex-wrap: wrap;
+    }
+
+}
+
+
+@media screen and (min-width: 902px) and (max-width: 1200px) {
+
+    .distance {
+        padding-top: 1%;
+        padding-left: 20%;
+        padding-right: 2%;
+    }
+
+}
