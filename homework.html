@@ -6,6 +6,11 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/consulting-agency.css">
 </head>
+<style>
+    .mySlides {
+        display: none;
+    }
+</style>
 <body>
 <header>
     <nav>
@@ -37,15 +42,23 @@
     <section class="consulting">
         <div class="distance">
             <div class="text-italic">
-                <q class="q">
+                <q class="q mySlides ">
                     Lorem ipsum dolor sit amet, consecterur adipiscing elit.
                     Donec leo nisi, feugiat vel placerat, vulputate ac nibh.
                     Ut scelerisque quis nulla sed tempor.
                 </q>
+                <q class="q mySlides">
+                    Strange, my daughter, the word flew out of your mouth.
+                </q>
+                <q class="q mySlides">
+                    It is strange how mortal people accuse us of all gods!
+                    Evil from us, they say; but not often themselves
+                    Doom, fate in spite of, bring on themselves madness?
+                </q>
             </div>
             <div class="buttons">
-                <button class="but"><i class="fa fa-chevron-left color"></i></button>
-                <button class="but2"><i class="fa fa-chevron-right color"></i>
+                <button class="but" onclick="plusDivs(-1)"><i class="fa fa-chevron-left color"></i></button>
+                <button class="but2" onclick="plusDivs(1)"><i class="fa fa-chevron-right color"></i>
                 </button>
             </div>
         </div>
@@ -124,5 +137,24 @@
         </div>
     </footer>
 </main>
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName('mySlides');
+        if (n > x.length) {slideIndex = 1;}
+        if (n < 1) {slideIndex = x.length;}
+        for (i = 0; i < x.length; i++) {
+            x[ i ].style.display = 'none';
+        }
+        x[ slideIndex - 1 ].style.display = 'block';
+    }
+</script>
 </body>
 </html>
